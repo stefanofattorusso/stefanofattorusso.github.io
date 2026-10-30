@@ -1,360 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — Parsimonia</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --ink: #1a1814;
-      --paper: #f5f0e8;
-      --accent: #6b5c3e;
-      --muted: #9c8c72;
-      --rule: #d5cdc0;
-      --highlight: #e8e0d0;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — Parsimonia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+          --ink: #1a1814;
+          --paper: #f9f7f2;
+          --accent: #6b5c3e;
+          --muted: #9c8c72;
+          --rule: #d5cdc0;
+          --highlight: #e8e0d0;
+        }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    body {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      background: var(--paper);
-      color: var(--ink);
-      font-size: 18px;
-      line-height: 1.8;
-      min-height: 100vh;
-    }
+        body {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+          background: var(--paper);
+          color: var(--ink);
+          font-size: 16px;
+          line-height: 1.7;
+          min-height: 100vh;
+        }
 
-    /* Texture overlay */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 0;
-    }
+        /* Texture overlay */
+        body::before {
+          content: '';
+          position: fixed;
+          inset: 0;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+          pointer-events: none;
+          z-index: 0;
+        }
 
-    .wrapper {
-      position: relative;
-      z-index: 1;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 80px 40px 120px;
-    }
+        .wrapper {
+          position: relative;
+          z-index: 1;
+          max-width: 760px;
+          margin: 0 auto;
+          padding: 80px 40px 120px;
+        }
 
-    /* Header */
-    header {
-      border-bottom: 1px solid var(--rule);
-      padding-bottom: 48px;
-      margin-bottom: 64px;
-    }
+        /* Header */
+        header {
+          border-bottom: 1px solid var(--rule);
+          padding-bottom: 48px;
+          margin-bottom: 64px;
+        }
 
-    .app-label {
-      font-family: 'DM Mono', monospace;
-      font-size: 11px;
-      font-weight: 300;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 20px;
-    }
+        .app-label {
+          font-family: 'Inter', sans-serif;
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          color: var(--muted);
+          margin-bottom: 20px;
+        }
 
-    h1 {
-      font-size: clamp(2.4rem, 5vw, 3.6rem);
-      font-weight: 300;
-      line-height: 1.15;
-      letter-spacing: -0.01em;
-      margin-bottom: 20px;
-    }
+        h1 {
+          font-family: 'Playfair Display', Georgia, serif;
+          font-size: clamp(2.4rem, 5vw, 3.6rem);
+          font-weight: 400;
+          line-height: 1.15;
+          letter-spacing: -0.01em;
+          margin-bottom: 20px;
+        }
 
-    h1 em {
-      font-style: italic;
-      color: var(--accent);
-    }
+        h1 em {
+          font-style: italic;
+          color: var(--accent);
+        }
 
-    .meta {
-      font-family: 'DM Mono', monospace;
-      font-size: 12px;
-      color: var(--muted);
-      font-weight: 300;
-      letter-spacing: 0.05em;
-    }
+        .meta {
+          font-family: 'Inter', sans-serif;
+          font-size: 13px;
+          color: var(--muted);
+          font-weight: 400;
+          letter-spacing: 0.02em;
+        }
 
-    /* Intro block */
-    .intro {
-      background: var(--highlight);
-      border-left: 3px solid var(--accent);
-      padding: 28px 32px;
-      margin-bottom: 64px;
-      font-size: 1.05rem;
-      font-style: italic;
-      color: var(--accent);
-      line-height: 1.9;
-    }
+        /* Intro block */
+        .intro {
+          font-family: 'Playfair Display', Georgia, serif;
+          background: var(--highlight);
+          border-left: 3px solid var(--accent);
+          padding: 28px 32px;
+          margin-bottom: 64px;
+          font-size: 1.15rem;
+          font-style: italic;
+          color: var(--accent);
+          letter-spacing: 0.05em;
+          line-height: 1.8;
+        }
 
-    /* Sections */
-    section {
-      margin-bottom: 56px;
-    }
+        /* Sections */
+        section {
+          margin-bottom: 56px;
+        }
 
-    h2 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-style: normal;
-      color: var(--accent);
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
+        h2 {
+          font-family: 'Playfair Display', Georgia, serif;
+          font-size: 1.3rem;
+          font-weight: 600;
+          letter-spacing: 0.04em;
+          font-style: normal;
+          color: var(--accent);
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+        }
 
-    h2::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--rule);
-    }
+        h2::after {
+          content: '';
+          flex: 1;
+          height: 1px;
+          background: var(--rule);
+        }
 
-    .section-num {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      font-weight: 300;
-      color: var(--muted);
-      letter-spacing: 0.1em;
-    }
+        .section-num {
+          font-family: 'Inter', sans-serif;
+          font-size: 12px;
+          font-weight: 500;
+          color: var(--muted);
+          letter-spacing: 0.08em;
+        }
 
-    p {
-      margin-bottom: 1.1em;
-      color: #2a2620;
-    }
+        p {
+          margin-bottom: 1.1em;
+          font-weight: 100;
+          color: #2a2620;
+        }
 
-    p:last-child { margin-bottom: 0; }
+        p:last-child { margin-bottom: 0; }
 
-    ul {
-      list-style: none;
-      margin: 16px 0;
-      padding: 0;
-    }
+        ul {
+          list-style: none;
+          margin: 16px 0;
+          padding: 0;
+        }
 
-    ul li {
-      padding: 6px 0 6px 24px;
-      position: relative;
-      color: #2a2620;
-    }
+        ul li {
+          padding: 6px 0 6px 24px;
+          position: relative;
+          color: #2a2620;
+        }
 
-    ul li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: var(--muted);
-      font-weight: 300;
-    }
+        ul li::before {
+          content: '—';
+          position: absolute;
+          left: 0;
+          color: var(--muted);
+          font-weight: 300;
+        }
 
-    /* Third-party service cards */
-    .service-card {
-      border: 1px solid var(--rule);
-      padding: 24px 28px;
-      margin: 24px 0;
-      background: rgba(255,255,255,0.4);
-    }
+        /* Service and feature cards */
+        .service-card {
+          border: 1px solid var(--rule);
+          padding: 24px 28px;
+          margin: 24px 0;
+          background: rgba(255,255,255,0.4);
+        }
 
-    .service-card strong {
-      display: block;
-      font-family: 'DM Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
+        .service-card strong {
+          display: block;
+          font-family: 'Inter', sans-serif;
+          font-size: 13px;
+          font-weight: 600;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          color: var(--accent);
+          margin-bottom: 8px;
+        }
 
-    .service-card a {
-      font-family: 'DM Mono', monospace;
-      font-size: 12px;
-      color: var(--muted);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
+        .service-card a {
+          font-family: 'Inter', sans-serif;
+          font-size: 13px;
+          color: var(--muted);
+          text-decoration: underline;
+          text-underline-offset: 3px;
+        }
 
-    /* Contact block */
-    .contact-block {
-      border: 1px solid var(--accent);
-      padding: 32px;
-      margin-top: 24px;
-      text-align: center;
-    }
+        /* Contact block */
+        .contact-block {
+          border: 1px solid var(--accent);
+          padding: 32px;
+          margin-top: 24px;
+          text-align: center;
+        }
 
-    .contact-block .placeholder {
-      font-family: 'DM Mono', monospace;
-      font-size: 14px;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      background: var(--highlight);
-      padding: 10px 20px;
-      display: inline-block;
-      margin-top: 12px;
-    }
+        .contact-block .placeholder {
+          font-family: 'Inter', sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: 0.04em;
+          color: var(--muted);
+          background: var(--highlight);
+          padding: 10px 20px;
+          display: inline-block;
+          margin-top: 12px;
+        }
 
-    /* Footer */
-    footer {
-      margin-top: 80px;
-      padding-top: 40px;
-      border-top: 1px solid var(--rule);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
+        /* Footer */
+        footer {
+          margin-top: 80px;
+          padding-top: 40px;
+          border-top: 1px solid var(--rule);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 16px;
+        }
 
-    footer p {
-      font-family: 'DM Mono', monospace;
-      font-size: 11px;
-      font-weight: 300;
-      color: var(--muted);
-      letter-spacing: 0.08em;
-      margin: 0;
-    }
+        footer p {
+          font-family: 'Inter', sans-serif;
+          font-size: 12px;
+          font-weight: 400;
+          color: var(--muted);
+          letter-spacing: 0.03em;
+          margin: 0;
+        }
 
-    a {
-      color: var(--accent);
-      text-decoration-color: var(--rule);
-    }
+        a {
+          color: var(--accent);
+          text-decoration-color: var(--rule);
+        }
 
-    @media (max-width: 600px) {
-      .wrapper { padding: 48px 24px 80px; }
-      footer { flex-direction: column; }
-    }
+        @media (max-width: 600px) {
+          .wrapper { padding: 48px 24px 80px; }
+          footer { flex-direction: column; }
+        }
 
-    /* Animate in */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+        /* Animate in */
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(16px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
 
-    header, .intro, section {
-      animation: fadeUp 0.6s ease both;
-    }
+        header, .intro, section {
+          animation: fadeUp 0.6s ease both;
+        }
 
-    .intro { animation-delay: 0.1s; }
-    section:nth-of-type(1)  { animation-delay: 0.15s; }
-    section:nth-of-type(2)  { animation-delay: 0.20s; }
-    section:nth-of-type(3)  { animation-delay: 0.25s; }
-    section:nth-of-type(4)  { animation-delay: 0.30s; }
-    section:nth-of-type(5)  { animation-delay: 0.35s; }
-    section:nth-of-type(6)  { animation-delay: 0.40s; }
-    section:nth-of-type(7)  { animation-delay: 0.45s; }
-    section:nth-of-type(8)  { animation-delay: 0.50s; }
-  </style>
+        .intro { animation-delay: 0.1s; }
+        section:nth-of-type(1)  { animation-delay: 0.15s; }
+        section:nth-of-type(2)  { animation-delay: 0.20s; }
+        section:nth-of-type(3)  { animation-delay: 0.25s; }
+        section:nth-of-type(4)  { animation-delay: 0.30s; }
+        section:nth-of-type(5)  { animation-delay: 0.35s; }
+        section:nth-of-type(6)  { animation-delay: 0.40s; }
+        section:nth-of-type(7)  { animation-delay: 0.45s; }
+        section:nth-of-type(8)  { animation-delay: 0.50s; }
+        section:nth-of-type(9)  { animation-delay: 0.55s; }
+        section:nth-of-type(10) { animation-delay: 0.60s; }
+    </style>
 </head>
 <body>
-  <div class="wrapper">
+<div class="wrapper">
 
     <header>
-      <div class="app-label">Parsimonia · Android Application</div>
-      <h1>Privacy <em>Policy</em></h1>
-      <p class="meta">Effective date: 29 April 2026 &nbsp;·&nbsp; Version 1.0</p>
+        <div class="app-label">Parsimonia · Android Application</div>
+        <h1>Privacy <em>Policy</em></h1>
+        <p class="meta">Effective date: 30 October 2026 &nbsp;·&nbsp; Version 1.1</p>
     </header>
 
     <div class="intro">
-      Parsimonia is built around the Kakebo philosophy of mindful, intentional spending.
-      That same philosophy extends to data: we collect only what is strictly necessary
-      to improve the app, and never what is personal to you.
+        Parsimonia is built around the Kakebo philosophy of mindful, intentional spending.
+        That same philosophy extends to data: we collect only what is strictly necessary
+        to improve app stability, and never what is personal to you. Your financial journal
+        remains entirely private, local-first, and under your absolute control.
     </div>
 
-    <!-- 1 -->
+    <!-- 01 -->
     <section>
-      <h2><span class="section-num">01</span> About This Policy</h2>
-      <p>This Privacy Policy explains how Parsimonia ("the App", "we", "our") handles information when you use our Android application. It applies to all users worldwide, regardless of country of residence.</p>
-      <p>By installing or using the App you agree to the practices described in this document. If you disagree with any part of this policy, please discontinue use of the App.</p>
+        <h2><span class="section-num">01</span> About This Policy</h2>
+        <p>This Privacy Policy explains how Parsimonia ("the App", "we", "our") handles information when you use our Android application. It applies to all users worldwide, regardless of country of residence.</p>
+        <p>By installing or using the App, you agree to the practices described in this document. If you disagree with any part of this policy, please discontinue use of the App.</p>
     </section>
 
-    <!-- 2 -->
+    <!-- 02 -->
     <section>
-      <h2><span class="section-num">02</span> Data We Do Not Collect</h2>
-      <p>Parsimonia is a fully local, offline-first application. We do <strong>not</strong> collect, transmit, or store on our servers any of the following:</p>
-      <ul>
-        <li>Your name, email address, or any account credentials</li>
-        <li>Your financial data, income figures, or spending entries</li>
-        <li>Your device's location</li>
-        <li>Photos or files from your device</li>
-        <li>Any information that could identify you as an individual</li>
-      </ul>
-      <p>All budgeting data you enter remains exclusively on your device and is never transmitted to us.</p>
+        <h2><span class="section-num">02</span> Local-First Architecture &amp; Data We Do Not Collect</h2>
+        <p>Parsimonia is designed from the ground up as a <strong>local-first, account-free application</strong>. We operate no proprietary user database or central servers holding your personal or financial records. We do <strong>not</strong> collect, transmit, or store on our servers any of the following:</p>
+        <ul>
+            <li>Your name, email address, phone number, or login credentials</li>
+            <li>Your financial entries, budgets, income figures, notes, or spending reflections</li>
+            <li>Your bank account details, payment card information, or credentials</li>
+            <li>Your device's precise or approximate location</li>
+            <li>Photos, videos, or files from your device storage</li>
+            <li>Any information that directly identifies you as an individual</li>
+        </ul>
+        <p>All budgeting information you record resides strictly in a local on-device database on your phone and is never sent to us.</p>
     </section>
 
-    <!-- 3 -->
+    <!-- 03 -->
     <section>
-      <h2><span class="section-num">03</span> Data Collected by Third-Party Services</h2>
-      <p>The App integrates two third-party SDKs for analytics and stability monitoring. These services may collect limited, anonymised technical data as described below.</p>
+        <h2><span class="section-num">03</span> Optional Peer-to-Peer (P2P) Synchronization</h2>
+        <p>Parsimonia includes an optional feature that allows you to synchronize your household budget with a partner or across your own secondary Android device. Because we do not run user accounts or cloud databases, this sync works on a decentralized, peer-to-peer (P2P) model built on the following privacy and security guarantees:</p>
 
-      <div class="service-card">
-        <strong>Google Analytics for Firebase</strong>
-        <p>We use Google Analytics to understand aggregate usage patterns — such as which screens are most visited and how often features are used. This data is anonymous and cannot be used to identify you personally. Google may collect device identifiers, app interaction events, and general demographic data at an aggregated level.</p>
-        <p>You may opt out of analytics data collection via your device's advertising settings or by disabling analytics in the App settings (if available).</p>
-        <p>Google's privacy policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
-      </div>
+        <div class="service-card">
+            <strong>Zero-Knowledge End-to-End Encryption (E2EE)</strong>
+            <p>Before any data leaves your phone, your recent active budget data (the current and preceding month) is compressed and encrypted on your device using authenticated <strong>AES-256-GCM</strong> encryption with keys derived via <strong>HKDF-SHA256</strong> from a unique master pairing secret. Only you and the device you personally pair hold this key.</p>
+        </div>
 
-      <div class="service-card">
-        <strong>Firebase Crashlytics &amp; Performance Monitoring</strong>
-        <p>We use Firebase Crashlytics to automatically detect and report app crashes, and Firebase Performance Monitoring to measure app start-up time and network latency. These reports contain stack traces, device model, OS version, and anonymised device identifiers. They contain no personal or financial data from within the App.</p>
-        <p>Firebase privacy policy: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></p>
-      </div>
+        <div class="service-card">
+            <strong>Hardware-Backed Secret Storage</strong>
+            <p>Your sync master secret is wrapped and protected inside the hardware-backed <strong>Android Keystore</strong>. Sensitive keys are never transmitted unencrypted and are scrubbed from device memory when not in use.</p>
+        </div>
+
+        <div class="service-card">
+            <strong>Decentralized Relays &amp; Traffic-Analysis Protection</strong>
+            <p>Sync payloads are passed between paired devices as encrypted, ephemeral dead-drop events over decentralized public <strong>Nostr relays</strong> (using protocol NIP-78). Relays receive only authentic BIP-340 Schnorr cryptographic signatures and sealed ciphertext. Furthermore, sync payloads are padded to fixed 4 KB block boundaries before encryption, preventing relay operators and network observers from inferring transaction counts or activity patterns.</p>
+        </div>
+
+        <div class="service-card">
+            <strong>Tombstone Privacy &amp; Data Deletion</strong>
+            <p>When you delete an entry, the deletion propagates to your paired partner as a soft-delete tombstone. To ensure privacy, any textual notes or emotional reflections associated with that entry are permanently wiped from the tombstone record before it is synchronized.</p>
+        </div>
+
+        <p>You can view, edit, or reset the relay servers in the App settings at any time. Unpairing your device immediately purges the cryptographic keys from your device's Keystore, wipes sync preferences, and ceases all synchronization activity.</p>
     </section>
 
-    <!-- 4 -->
+    <!-- 04 -->
     <section>
-      <h2><span class="section-num">04</span> Legal Basis for Processing</h2>
-      <p>Where applicable (e.g. users in the European Economic Area), our legal basis for the limited analytics and crash data processed by third-party SDKs is <strong>legitimate interest</strong> — specifically, improving app stability and understanding how the App is used at an aggregate level.</p>
-      <p>No data processing requires you to provide personal information, and no processing is based on consent to share personal data (because no personal data is collected).</p>
+        <h2><span class="section-num">04</span> Device Permissions &amp; Local Features</h2>
+        <p>The App requests only the device permissions strictly necessary to deliver its core features:</p>
+        <ul>
+            <li>
+                <strong>Camera Access (Optional):</strong> The App requests camera access solely when you choose to pair a device by scanning your partner's pairing QR code. The camera stream is analyzed entirely in real-time on-device using ML Kit / CameraX to decode the pairing string. No images, video frames, or photos are ever recorded, saved, or uploaded. If you prefer not to grant camera access, you can pair devices manually by copying and pasting the pairing code string.
+            </li>
+            <li>
+                <strong>Notifications (Optional):</strong> The App uses the Android notification permission (<code>POST_NOTIFICATIONS</code>) to deliver daily mindful reflection reminders scheduled locally using Android's WorkManager. These reminders are generated and triggered 100% on-device; no external push messaging server (such as Firebase Cloud Messaging) is used.
+            </li>
+            <li>
+                <strong>Local Backup &amp; Restore:</strong> You may export or import a full backup of your budgeting ledger via the Android system file picker (Storage Access Framework). The backup file is saved directly to your chosen local folder or personal storage. We have no access to these backup files and never upload them to any server.
+            </li>
+        </ul>
     </section>
 
-    <!-- 5 -->
+    <!-- 05 -->
     <section>
-      <h2><span class="section-num">05</span> Your Rights</h2>
-      <p>Depending on your country of residence, you may have the following rights regarding data held about you by our third-party partners:</p>
-      <ul>
-        <li><strong>Right to access</strong> — request a copy of data held about you</li>
-        <li><strong>Right to erasure</strong> — request deletion of your data</li>
-        <li><strong>Right to object</strong> — object to processing based on legitimate interest</li>
-        <li><strong>Right to opt out</strong> — disable analytics via device or app settings</li>
-      </ul>
-      <p>Because we do not hold personal data ourselves, most requests should be directed to Google/Firebase via their respective privacy tools. You may also contact us using the details in Section 8 and we will assist you.</p>
+        <h2><span class="section-num">05</span> Data Processed by Third-Party Services</h2>
+        <p>To maintain stability, diagnose crashes, and safely manage feature rollouts, the App integrates selected Google Firebase SDKs. These services process limited, anonymized technical telemetry:</p>
+
+        <div class="service-card">
+            <strong>Google Analytics for Firebase</strong>
+            <p>We use Google Analytics to understand aggregate usage patterns — such as which screens are viewed most frequently and how often features are used. This data is aggregated and cannot be used to identify you personally. Google may collect anonymized device identifiers and app interaction events.</p>
+            <p>You may opt out of analytics data collection via your device's advertising settings or system privacy controls.</p>
+            <p>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+        </div>
+
+        <div class="service-card">
+            <strong>Firebase Crashlytics &amp; Performance Monitoring</strong>
+            <p>We use Firebase Crashlytics to automatically detect, diagnose, and resolve application crashes, and Firebase Performance Monitoring to measure startup times. These reports contain stack traces, device model, operating system version, and anonymized diagnostic identifiers. They never contain your financial entries, amounts, or personal notes.</p>
+            <p>Firebase Privacy Overview: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></p>
+        </div>
+
+        <div class="service-card">
+            <strong>Firebase Remote Config</strong>
+            <p>We use Firebase Remote Config to fetch dynamic application configuration parameters and feature flags (such as gating experimental features or managing sync rollout). It retrieves non-personal configuration flags and evaluates anonymous criteria (e.g., app version, OS level). It does not collect or transmit personal financial data.</p>
+            <p>Firebase Privacy Overview: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></p>
+        </div>
+
+        <div class="service-card">
+            <strong>Decentralized Nostr Relay Network (When Sync is Enabled)</strong>
+            <p>If and only if you activate peer-to-peer sync, the App connects via encrypted WebSockets (<code>wss://</code>) to public Nostr relays. As with any internet connection, relay servers see your IP address during active socket transmission. However, because all sync payloads are end-to-end encrypted and padded before leaving your device, relay operators cannot read your financial records or associate them with your real-world identity.</p>
+        </div>
     </section>
 
-    <!-- 6 -->
+    <!-- 06 -->
     <section>
-      <h2><span class="section-num">06</span> Data Retention &amp; Security</h2>
-      <p>Your budgeting data is stored locally on your device only. It is retained until you uninstall the App or manually delete it from within the App. We have no access to this data and therefore cannot retrieve or delete it on your behalf.</p>
-      <p>Crash and analytics data retained by Firebase is subject to Google's own retention policies, which you can review at the links provided in Section 3.</p>
+        <h2><span class="section-num">06</span> Legal Basis for Processing</h2>
+        <p>Where applicable under data protection laws (such as the GDPR in the European Economic Area):</p>
+        <ul>
+            <li><strong>Legitimate Interest:</strong> Processing aggregated analytics, crash logs, and remote configuration flags is based on our legitimate interest in maintaining application stability, security, and performance.</li>
+            <li><strong>User Consent &amp; Action:</strong> Optional device capabilities (camera access for QR pairing, notification prompts, and peer-to-peer sync) are activated exclusively upon your explicit action or permission grant in the App.</li>
+        </ul>
+        <p>No personal data is sold, rented, or monetized, and no profiling or targeted behavioral advertising is performed.</p>
     </section>
 
-    <!-- 7 -->
+    <!-- 07 -->
     <section>
-      <h2><span class="section-num">07</span> Changes to This Policy</h2>
-      <p>We may update this Privacy Policy from time to time, for example when we add new features or third-party integrations. When we do, we will revise the effective date at the top of this document and, where required by law, notify you within the App.</p>
-      <p>We encourage you to review this policy periodically. Continued use of the App after changes are posted constitutes acceptance of the updated policy.</p>
+        <h2><span class="section-num">07</span> Your Rights &amp; Control</h2>
+        <p>Depending on your jurisdiction, you have statutory rights concerning data processed about you:</p>
+        <ul>
+            <li><strong>Right to access and portability:</strong> You can export all your local financial entries at any time using the built-in Backup &amp; Export tool.</li>
+            <li><strong>Right to erasure (deletion):</strong> Because all budgeting records are stored on your device only, you can permanently delete all your data at any time by clearing the App's data in Android Settings or uninstalling the App. Unpairing a synced device permanently destroys the local cryptographic keys.</li>
+            <li><strong>Right to object or opt-out:</strong> You can revoke camera or notification permissions at any time in your Android system settings, and disable analytics tracking via device-level privacy settings.</li>
+        </ul>
+        <p>For requests regarding technical telemetry retained by Google Firebase, inquiries may be directed through Google's privacy tools or by contacting us.</p>
     </section>
 
-    <!-- 8 -->
+    <!-- 08 -->
     <section>
-      <h2><span class="section-num">08</span> Contact</h2>
-      <p>If you have any questions, concerns, or requests relating to this Privacy Policy, please reach out to us. We will respond within 30 days.</p>
-      <div class="contact-block">
-        <p>Privacy enquiries</p>
-        <p><a href="mailto:wedinstantsapp@gmail.com">wedinstantsapp@gmail.com</a></p>
-      </div>
+        <h2><span class="section-num">08</span> Data Retention &amp; Security</h2>
+        <p>Your financial ledger is retained locally on your device until you choose to delete entries, restore a backup, clear app storage, or uninstall the App. We have no remote access to your device and cannot retrieve or wipe your local records on your behalf.</p>
+        <p>Telemetry and crash reports collected by Firebase are retained according to Google's standard data retention schedules (typically up to 90 days for crash logs and 14 months for analytics). All network communications (Firebase telemetry and encrypted Nostr relay events) use TLS / WSS encryption in transit.</p>
+    </section>
+
+    <!-- 09 -->
+    <section>
+        <h2><span class="section-num">09</span> Changes to This Policy</h2>
+        <p>We may periodically update this Privacy Policy to reflect app enhancements, architecture updates, or evolving legal requirements. When updates occur, we will update the effective date and version number at the top of this document.</p>
+        <p>We recommend reviewing this policy from time to time. Continued use of the App following changes constitutes acknowledgment and acceptance of the revised terms.</p>
+    </section>
+
+    <!-- 10 -->
+    <section>
+        <h2><span class="section-num">10</span> Contact</h2>
+        <p>If you have any questions, suggestions, or concerns regarding this Privacy Policy or Parsimonia's privacy practices, please contact us. We aim to respond within 30 days.</p>
+        <div class="contact-block">
+            <p>Privacy enquiries</p>
+            <p><a href="mailto:wedinstantsapp@gmail.com">wedinstantsapp@gmail.com</a></p>
+        </div>
     </section>
 
     <footer>
-      <p>© 2026 Parsimonia. All rights reserved.</p>
-      <p>Document version 1.0 · 29 April 2026</p>
+        <p>© 2026 Parsimonia. All rights reserved.</p>
+        <p>Document version 1.1 · 30 October 2026</p>
     </footer>
 
-  </div>
+</div>
 </body>
 </html>
